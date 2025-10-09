@@ -15,6 +15,7 @@ body {
     height: 100vh;
     border-bottom: 5px;
     border-color: #c9ae76;
+    padding: 10px 10%;
 }
 
 .standing {
@@ -25,10 +26,6 @@ body {
     max-height: 75%;
     border-radius: 35px;
     border-color: #c9ae76;
-}
-
-.container {
-    padding: 10px 10%;
 }
 
 nav {
@@ -67,6 +64,7 @@ nav ul li a:hover::after {
 }
 
 .header-format {
+    display: flex;
     margin-top: 20%;
     font-size: 30px;
 }
@@ -87,6 +85,13 @@ nav ul li a:hover::after {
 
 .header-text h1 span{
     color: #c9ae76;
+}
+
+.resume-button {
+    background-color: rgb(35, 35, 168);
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 /* About */
