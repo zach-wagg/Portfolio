@@ -1,78 +1,55 @@
-# React + TypeScript + Vite
+# LazyVim-Inspired Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, terminal-styled developer portfolio built with React, TypeScript, and Vite. Designed around the **LazyVim / NeoVim** aesthetic, this site functions as an interactive workspace where visitors can explore project code, documentation, and live embedded web apps using either keyboard shortcuts or mouse navigation.
 
-Currently, two official plugins are available:
+![Portfolio Preview](./public/preview.png) *(optional preview image)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **TUI/LazyVim UI:** Buffer tabs, file tree navigation (`Neo-Tree`), statusline (`Lualine`), and command palette search.
+- **Embedded Project Viewports:** Sandboxed live previews of independent web projects integrated seamlessly alongside code snippets and Markdown case studies.
+- **Dual Controls:** Full mouse accessibility paired with Vim keyboard navigation.
+- **Tokyo Night Aesthetic:** Dark-mode TUI interface styled with custom Tailwind themes and JetBrains Mono typography.
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework:** [React 19](https://react.dev/) + [Vite](https://vite.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Typography:** JetBrains Mono
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Navigation Shortcuts
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+| Keybinding | Action |
+| :--- | :--- |
+| `j` / `k` | Scroll down / up through active buffer |
+| `<Space> + f` | Open Telescope quick-search command menu |
+| `Tab` / `Shift + Tab` | Cycle forward / backward through open tabs |
+| `Esc` | Close floating modals or exit focused iframe |
 
-```
+---
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Local Development Setup
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository and run the development server locally:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+\`\`\`bash
+# 1. Clone repo
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
 
-```
+# 2. Install dependencies
+npm install
+
+# 3. Start development server
+npm run dev
+\`\`\`
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
