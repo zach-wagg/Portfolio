@@ -40,16 +40,14 @@ An interactive, terminal-styled developer portfolio built with React, TypeScript
 
 Clone the repository and run the development server locally:
 
-\`\`\`bash
-# 1. Clone repo
+### 1. Clone repo
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
 
-# 2. Install dependencies
+### 2. Install dependencies
 npm install
 
-# 3. Start development server
+### 3. Start development server
 npm run dev
-\`\`\`
 
 Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
