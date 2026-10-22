@@ -30,5 +30,21 @@
 
 body {
   margin: 0;
+  overflow: hidden;
+}
+
+#workspace {
+  display: flex;
+  flex: 1;
   overflow: hidden; /* Prevent window scroll; handle scrolling inside Vim buffers */
+}
+
+#viewport {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-vim-bg);
+  color: var(--color-vim-fg);
 }
