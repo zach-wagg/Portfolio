@@ -39,7 +39,13 @@ body {
   overflow: hidden; /* Prevent window scroll; handle scrolling inside Vim buffers */
 }
 
+#bufferLine {
+  height: 25px;
+  border: 2px solid aliceblue;
+}
+
 #viewport {
+  border: 2px solid aliceblue;
   position: relative;
   flex: 1;
   display: flex;
