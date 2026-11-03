@@ -34,18 +34,34 @@ body {
 }
 
 #workspace {
-  display: flex;
-  flex: 1;
+  display: grid;
   overflow: hidden; /* Prevent window scroll; handle scrolling inside Vim buffers */
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 45%;
+  height: 100%;
+  background-color: var(--color-vim-bg);
+  color: var(--color-vim-fg);
+  display: grid;
+
+  /* Start hidden by sliding off-screen to the left */
+  transform: translateX(-250px);
+}
+
+#sidebar.visible {
+  transform: translateX(0);
 }
 
 #bufferLine {
   height: 25px;
-  border: 2px solid aliceblue;
 }
 
 #viewport {
-  border: 2px solid aliceblue;
   position: relative;
   flex: 1;
   display: flex;

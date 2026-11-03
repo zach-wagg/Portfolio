@@ -8,15 +8,13 @@ import Lualine from './assets/Lualine.tsx'
 function App() {
   return (
     <div id="workspace">
+      {/* Neo-Tree sidebar */}
+      <Sidebar />
+      
       <div>
         {/* Bufferline */}
         <Bufferline />
       </div>
-      {/* Neo-Tree sidebar */}
-      <aside id="sidebar">
-        <Sidebar />
-      </aside>
-
       <div>
         {/* Workspace Viewport*/}
         <Viewport />
