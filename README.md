@@ -2,7 +2,7 @@
 
 An interactive, terminal-styled developer portfolio built with React, TypeScript, and Vite. Designed around the **LazyVim / NeoVim** aesthetic, this site functions as an interactive workspace where visitors can explore project code, documentation, and live embedded web apps using either keyboard shortcuts or mouse navigation.
 
-![Portfolio Preview](./public/preview.png) *(optional preview image)*
+![Portfolio Preview](./public/preview.png)
 
 ---
 
