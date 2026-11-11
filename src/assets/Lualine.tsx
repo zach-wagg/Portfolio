@@ -1,7 +1,7 @@
 // Status Bar
 export default function Lualine() {
     return (
-        <div>
+        <div id="lualine">
             <h1>This is the Status Bar.</h1>
         </div>
     )

@@ -8,7 +8,7 @@ export default function Sidebar() {
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             // Check for Ctrl + E (or Cmd + Shift + E on Mac)
-            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'e') {
+            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'e') { // NOTE: Eventually will be changed to <space> to allow for "Which Key" sequences
                 event.preventDefault(); // Prevents default browser actions (Opens URL Bar)
                 setIsVisible((prev) => !prev);
             }
@@ -21,12 +21,11 @@ export default function Sidebar() {
         };
     }, []);
 
-    // Return null if completely hidden so it doesn't take up layout space
     if (!isVisible) return null;
 
     return (
         
-        <div id={`sidebar ${isVisible ? 'visible' : ''}`}>
+        <div id="sidebar" className={isVisible ? 'visible' : ''}>
             <h1>Sidebar Content</h1>
         </div>
     )

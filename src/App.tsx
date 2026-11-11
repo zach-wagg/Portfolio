@@ -1,5 +1,5 @@
 import './App.css'
-import React from 'react'
+import { React, useState } from 'react'
 import Bufferline from './assets/Bufferline.tsx'
 import Sidebar from './assets/Sidebar.tsx'
 import Viewport from './assets/Viewport.tsx'
@@ -8,16 +8,15 @@ import Lualine from './assets/Lualine.tsx'
 function App() {
   return (
     <div id="workspace">
-      {/* Neo-Tree sidebar */}
-      <Sidebar />
-      
-      <div>
-        {/* Bufferline */}
-        <Bufferline />
-      </div>
-      <div>
-        {/* Workspace Viewport*/}
-        <Viewport />
+      <div id="mainContent">
+        {/* Neo-Tree sidebar */}
+        <Sidebar />
+        <div id="workspaceView">
+          {/* Bufferline */}
+          <Bufferline />
+          {/* Workspace Viewport*/}
+          <Viewport />
+        </div>
       </div>
       
       {/* Lualine */}

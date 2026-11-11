@@ -30,35 +30,53 @@
 
 body {
   margin: 0;
-  overflow: hidden;
+  overflow: hidden; /* Prevent window scroll */
+}
+
+#mainContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden; /* Prevent window scroll */
 }
 
 #workspace {
-  display: grid;
-  overflow: hidden; /* Prevent window scroll; handle scrolling inside Vim buffers */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; /* Prevent window scroll */
 }
 
 #sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 45%;
+  width: 30%;
   height: 100%;
+  border-right: 1px solid var(--color-vim-border);
   background-color: var(--color-vim-bg);
   color: var(--color-vim-fg);
   display: grid;
 
   /* Start hidden by sliding off-screen to the left */
-  transform: translateX(-250px);
+  transform: translateX(-100%);
 }
 
 #sidebar.visible {
   transform: translateX(0);
 }
 
+#workspaceView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 #bufferLine {
-  height: 25px;
+  position: relative;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  border: solid 1px var(--color-vim-border);
 }
 
 #viewport {
@@ -66,7 +84,14 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: hidden; /* Prevent window scroll */
   background-color: var(--color-vim-bg);
   color: var(--color-vim-fg);
+}
+
+#lualine {
+  height: 24px;
+  width: 100%;
+  border: solid 1px var(--color-vim-border);
+  border-radius: 3px;
 }
